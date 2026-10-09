@@ -176,6 +176,10 @@ tr:last-child td{border-bottom:0}
 .headline ol.big>li{margin:12px 0;font-size:15.5px}
 .headline ol.big ul{margin:4px 0 0;padding-left:18px;font-size:14px;color:var(--muted)} .headline ol.big ul li{margin:2px 0}
 .note{font-size:12.5px;color:var(--muted);border-left:3px solid var(--line);padding:4px 10px;margin:10px 0}
+.prose{max-width:78ch;font-size:15px;line-height:1.65;margin:0 0 14px}
+.prose p{margin:0 0 12px}
+.prose h3{font-size:16.5px;margin:18px 0 6px;line-height:1.3;text-wrap:balance}
+.prose.intro{margin:4px 0 18px}
 footer{margin-top:40px;font-size:12.5px;color:var(--muted)}
 a{color:inherit}
 @media (max-width:900px){
@@ -191,6 +195,10 @@ a{color:inherit}
 <div class="wrap">
 <h1>Rural &amp; GenZ Creator LODs: What We Learned</h1>
 <p class="sub">Udaipur and Kumbhalgarh, 6–7 Oct 2026 · 17 creators and pairs across 16 sessions (21 audio recordings, 5 phone videos) · structured on the Rural LOD question framework and checked against Rural PFS hypotheses H1–H6</p>
+<div class="prose intro">
+<p>Over two days in Udaipur and Kumbhalgarh we sat with 17 creators and creator pairs who had signed up for the Meesho Creator Club (MCC) and asked all of them the same questions: what they do, how they found us, what they expected to earn, what they did after opening the app, and when and why they stop posting. The recruitment sheet had 22 names across four groups, from people who never got a post live to one creator earning around ₹20K a month. Every conversation was recorded, and in five cases we filmed the creator's own phone while they made a link, connected Instagram or built a video.</p>
+<p>The short version: the creators we met are not short of audience or effort. Several have reels with hundreds of thousands of views, several post two or three times a day, and five of them have taught themselves a four-app AI workflow to make product videos without showing their face. What separates the people earning from the people stalled is whether anyone ever showed them the first working post. Nobody in the sample learned it from Meesho. They learned from YouTube, from a friend, or from us at the table.</p>
+</div>
 <nav class="toc">
   <a href="#top">Top takeaways</a>
   <a href="#who">Who we met</a>
@@ -213,25 +221,27 @@ a{color:inherit}
 <!-- TOP TAKEAWAYS -->
 <section id="top">
 <h2>Top takeaways</h2>
-<div class="headline">
-<ol class="big">
-  <li><b>The gap between low and high earners is not effort, it is whether anyone ever showed them the first working post.</b>
-    <ul><li>7 of 17 never got a working affiliate post live, some after 5–7 months. All of them learned from YouTube, none from Meesho.</li>
-    <li>Every stalled creator we sat with got unstuck in a 5-minute walkthrough (IG connect, make a link, post with Auto-DM or story).</li></ul></li>
-  <li><b>Instagram connect itself fails for some creators.</b>
-    <ul><li>On video: the creator's IG login inside the Meesho app returns "Can't find account" twice before it works. <a href="#v2">Watch</a>.</li></ul></li>
-  <li><b>Rural creators are already faceless-AI creators, and the chain is long.</b>
-    <ul><li>Meesho product photo → ChatGPT prompt → Google Flow / Gemini / YouTube Create → gallery → Meesho link → Instagram. Seen end to end on video. <a href="#s3">See the chain</a>.</li>
-    <li>Reasons: camera shyness, no place to shoot, no cash to order samples.</li></ul></li>
-  <li><b>Most GenZ creators we met were students, and they stop posting during exams.</b>
-    <ul><li>Board-exam, nursing and Master's students in the sample. The drop is seasonal, not loss of interest.</li></ul></li>
-  <li><b>Free returns are our best hook, but creators don't know about them or don't trust them.</b>
-    <ul><li>One joined only for the 14-day return window; others stopped ordering samples because they feared charges or a block.</li></ul></li>
-  <li><b>Views don't turn into sales and creators can't see why.</b>
-    <ul><li>716K views with few link requests; 0% commission shown on every product for an active creator; unclear attribution when the buyer picks another item.</li></ul></li>
-  <li><b>Trust and safety issues surfaced.</b>
-    <ul><li>An account blocked after a dispute with a local delivery agent; fake "Meesho" callers taking OTPs to redirect refunds.</li></ul></li>
-</ol>
+<div class="prose">
+<h3>1. The gap between earning and stalled creators is a five-minute walkthrough, not talent or reach</h3>
+<p>Seven of the 17 never got a working affiliate post live. Some signed up seven months ago. Creator 8 posted one reel and stopped because she did not know a link was the next step. Creator 1 has movie edits with millions of views and has been on MCC for two months without making a single link. Creator 3 spent five or six months looking for Meesho inside Instagram's own product-tag list, where only Myntra and Flipkart appear, and concluded it could not be done. In every one of these cases the team walked them through it at the table in about five minutes: connect Instagram, pick a product, make the link, post with Auto-DM or a story. The reaction each time was some version of "that's it?". The high earners had the same walkthrough earlier in life, from a friend (Creator 14) or from another affiliate platform (Creator 17). That is the whole difference.</p>
+
+<h3>2. Instagram connect fails for some creators, and the app gives them nothing to do about it</h3>
+<p>We filmed one creator trying to connect Instagram from inside the Meesho app. The Instagram login returned "Can't find account" twice before she retried with her phone number and discovered she also had to switch to a creator account, pick a category and answer "which best describes you". None of this is explained in the app, and a creator doing it alone at home would reasonably assume the feature is broken. Every later step depends on this one, so a silent failure here is a silent loss of the creator.</p>
+
+<h3>3. Rural creators are already faceless AI creators, and the chain is long and fragile</h3>
+<p>Five creators make videos without appearing on camera. Creator 16 showed the full chain on video: screenshot a Meesho product, upload the photos to ChatGPT and ask it to write a video prompt, paste the prompt and the image into Google Flow, wait for a clip of a model walking in the kurti, download it, then make the Meesho link and share to an Instagram story. Creator 4 runs the identical recipe. Creator 13 uses Gemini to generate four outfit images from one product photo. The reasons are consistent: camera shyness, nowhere to shoot, and no cash to order samples. The reasons it breaks are also consistent: downloading the generated video, saving it to the gallery, and knowing which products carry commission. This is a format Meesho could own with a single in-app "make a video from this product" button.</p>
+
+<h3>4. Students are a large part of the GenZ base, and they pause for exams rather than quit</h3>
+<p>Five of the 17 are students: a nursing student, a B.Tech student from Jammu, a board-exam student, a beauty creator who told us her exams come every two months, and the sister in the brother-and-sister pair who is doing a Master's in Psychology. Their posting stops with the exam calendar and, in most cases, would restart after it. Treating that gap as churn and sending them generic win-back messages misreads what is happening. Two of them also told us their parents allow this only if income shows up, which means the first commission matters more for a student than for anyone else.</p>
+
+<h3>5. Free returns are our strongest hook, and most creators either don't know about them or don't trust them</h3>
+<p>Creator 2 joined specifically for the 14-day return window. At the other end, Creator 5 stopped ordering samples because she was afraid of being charged or blocked for returning too much, and Creator 7 had never heard that creators get 14 days where normal users get seven. Creator 17, the high earner, had her MCC account blocked after a dispute with a local delivery agent who was unhappy with her returns, which is exactly the fear the others described. The benefit exists, the fear exists, and the app does not put the one against the other anywhere a creator would see it.</p>
+
+<h3>6. Views do not turn into sales, and nobody can see why</h3>
+<p>Creator 10 has reels at 716K and 166K views, 1,660 followers, and zero earnings. Nobody asked her for a link, and she had no way of knowing whether the problem was the product, the caption, the call to action or the platform. She checked insights once a week, saw the numbers go nowhere, and stopped. Creator 14, who is earning, showed us an app where several products display 0% commission next to others at 10%. Creator 13 did not know what they earn if the buyer clicks their link and buys something else. Creator 17 prefers Wishlink because it shows daily clicks and orders per brand. The pattern is the same at every level: there is no feedback loop between a post and an outcome, so creators cannot learn.</p>
+
+<h3>7. Trust and safety problems reach creators before we do</h3>
+<p>Creator 17 told us about calls from people claiming to be Meesho's call centre: "your order was delivered but not updated, share the OTP". The OTP triggers a return and the refund goes to the caller's bank account. It happened to her once while she was cooking. She also described her account block after the delivery-agent dispute. None of the creators we met had received any call or message from Meesho since signing up, so the only "Meesho" voice some of them have heard is the scammer's.</p>
 </div>
 </section>
 
@@ -320,6 +330,10 @@ a{color:inherit}
 <!-- SECTION 1 -->
 <section id="s1">
 <h2>1 · Background &amp; motivation</h2>
+<div class="prose">
+<p>The low and high earners we met look alike on paper. Both groups have been on Instagram for years, both have real audiences, and both found MCC through the same channels: an Instagram or YouTube ad in seven cases, a creator's reel or an "earn money" video in three, a friend in one, and in Creator 1's case a Meesho WhatsApp message he opened by mistake. The difference starts with what they expected. The low earners came with a picture painted by ads and reels, including one ad that promised ₹600, and expected money to follow a post. When it did not, they had no second idea. The high earners came with a working model of affiliate already in their head, either from a friend who showed them (Creator 14) or from Wishlink (Creator 17), and treated MCC as one more channel to run the same loop on.</p>
+<p>Time is the other quiet divider. Four creators have jobs with long or fixed hours: Creator 2 works 11-hour shifts and takes three hours to make one post, Creator 8 does data entry, Creator 16 has a day job and tried to fit a four-app AI workflow around it. Five are students. Only the earning creators described content as the main thing they do in a day. On the phone-and-account question (H1), we saw no case of a woman using a male relative's phone. Pairs were siblings or friends sharing the work, not the device. We did not ask this systematically, so H1 stays open.</p>
+</div>
 <p class="lead">Framework questions: What do you do, how does your day go? Since when on Instagram, who follows you? How did you hear about MCC? How much did you expect to earn, how much now? Whose phone is this, who runs the account?</p>
 <div class="fw">
   <div class="hyp"><b class="h">H1</b><span>Women in T3/T4 use a male family member's phone, so data shows more male creators than reality <span class="ref">(Rural PFS #1)</span></span><span class="vd vn">Not tested</span></div>
@@ -362,6 +376,10 @@ a{color:inherit}
 <!-- SECTION 2 -->
 <section id="s2">
 <h2>2 · Onboarding &amp; comprehension</h2>
+<div class="prose">
+<p>We asked every creator to open the app and make a link while we watched. This was the most revealing ten minutes of each interview. The stalled creators got stuck in three places: connecting Instagram, which failed outright for one creator on video; finding where links are made at all, which Creator 3 and Creator 1 had been looking for inside Instagram's own product tags; and what to do with the link once copied, which Creator 6 had tried to paste into YouTube Shorts where it does not work. The earning creators did product, Get commission link, Share on Insta story or Auto-DM in under a minute, without talking.</p>
+<p>Comprehension of commission is thin at every level. Creator 4 posts twice a day and did not know how to tell which products carry commission. Creator 2 had been posting with Auto-DM for weeks and did not know that a buyer who clicks her link and buys a different saree earns her nothing. Creator 14, who earns, showed us products at 0% commission and could not say whether that was a bug or a rule. The high earners know the flow but not the rules; the low earners know neither. And when we asked how they know they did it right, nobody had an answer other than "views", which is the one number that does not tell them.</p>
+</div>
 <p class="lead">Framework questions: What did you do after opening the app the first time? Make a link and show us. What's the difference between Auto-DM and story? How and when does commission come? How do you know you did it right?</p>
 <div class="fw">
   <div class="hyp"><b class="h">H3</b><span>Low IGC/CG in T3 is because creators don't understand how to start (IG connect, link making, first post) <span class="ref">(Rural PFS #3)</span></span><span class="vd vy">Supported</span></div>
@@ -422,6 +440,10 @@ a{color:inherit}
 <!-- SECTION 3 -->
 <section id="s3">
 <h2>3 · Consistency &amp; posting habits</h2>
+<div class="prose">
+<p>Posting frequency is not the problem. Creator 6 batch-shoots five or six videos in a sitting and posts two or three reels a day. Creator 4 posts twice a day. Creator 14 posts two or three times a day with Auto-DM on. The rural creators who are active post more than most metro creators would. What breaks is continuity. The low earners post in bursts and then go quiet, and the reasons they gave are specific: no sales after a burst (Creators 10 and 3), not knowing the next step (Creators 8 and 7), exams (Creators 5, 10, 15 and the sister in 14), parents who want to see income first (Creator 5), fear of return charges (Creator 5), camera shyness (Creator 1), and simply no time around a shift (Creators 2 and 8).</p>
+<p>The high earners stop for different reasons. Creator 17 cut back after her account was blocked and her orders fell from 10 to 15 a day to a trickle. Creator 14 is unsure whether posting products that show 0% commission is worth the effort. In other words, the low earners stop because nothing happens, and the high earners stop when the platform gets in the way. Time per post also differs sharply: a faceless AI post takes 30 to 60 minutes across four apps, a quick phone reel with a product in hand takes 10 to 30 minutes, and the creators with a routine spend the morning picking products, shoot or generate in the afternoon, and check DMs and orders at night. Nobody in the low group described a routine at all.</p>
+</div>
 <p class="lead">Framework questions: How many times a week do you post, and when? How long does one post take? When do you stop posting, and why? Do you have a routine?</p>
 <div class="fw">
   <div class="hyp"><b class="h">H5</b><span>Weak CG retention (creators stop posting) blocks growth to ₹5K / ₹15K <span class="ref">(Rural PFS #4)</span></span><span class="vd vy">Supported</span></div>
@@ -483,6 +505,9 @@ a{color:inherit}
 <!-- SCORECARD -->
 <section id="hypo">
 <h2>Hypothesis scorecard</h2>
+<div class="prose">
+<p>Three of the six Rural PFS hypotheses held up clearly. Creators do not know how to start (H3), they have no feedback loop (H4), and they stop posting (H5), and the interviews put faces and reasons on each. H2, that low earners treat MCC as a side experiment with unrealistic expectations while high earners treat it as a business, is half right: the low side holds, but our only high earner above ₹5K runs her business mainly on Wishlink, so the sample cannot say what a high-earning MCC-first rural creator looks like. H1 (women using a male relative's phone) and H6 (rural creators post less than metro) were not tested; the first was not asked consistently and the second needs a metro comparison group.</p>
+</div>
 <div class="tablewrap">
 <table class="score" style="min-width:760px">
 <thead><tr><th>#</th><th>Hypothesis</th><th>Verdict</th><th>What we saw</th><th>Low vs high gap</th></tr></thead>
@@ -501,6 +526,9 @@ a{color:inherit}
 <!-- CREATORS -->
 <section id="creators">
 <h2>Creator by creator</h2>
+<div class="prose">
+<p>The four groups below are by outcome, not by effort. "Not activated" means no working affiliate post ever went live, even where the creator has been posting content for months. "Posting, low sales" means links exist but orders do not follow. "Earning" covers three creators, of whom only Creator 17 clears ₹5K a month, and she does most of it on Wishlink. The one reseller, Creator 15, buys Meesho products at ₹300, lists them at ₹400 on Facebook Marketplace and runs Facebook ads, and finds that simpler than affiliate. Each card lists what the creator told us, what blocked them, and a transcript button that opens the full recording.</p>
+</div>
 <p class="lead">Pairs interviewed together are shown as one card. "Transcript" opens the full auto-transcript with audio. Google Drive links need a Meesho login.</p>
 <div class="controls" id="cFilter">
   <span class="lbl">Show</span>
@@ -608,6 +636,9 @@ a{color:inherit}
 <!-- VIDEOS -->
 <section id="videos">
 <h2>Field videos</h2>
+<div class="prose">
+<p>The phone videos are the strongest evidence in this LOD because they show the app as the creator experiences it, not as we describe it. Video 1 is Creator 1 searching for Meesho inside Instagram's product tags and not finding it. Video 2 is the Instagram connect failure. Video 3 is Creator 14's daily flow on a cracked phone, including the 0% commission products. Video 4 is Creator 13 generating outfit images with Gemini and switching on Auto-DM. Video 5 is Creator 16's complete faceless chain from product screenshot to Instagram story. The short clips below are cut from those recordings and play inline; the full-length originals are on Google Drive.</p>
+</div>
 <p class="lead">Five phone videos from the visit (0.3–0.9 GB each). Short clips are cut below; the originals open in Google Drive. Each video is now mapped to a creator by what is on screen and the interview timing.</p>
 <div class="tablewrap">
 <table style="min-width:760px">
