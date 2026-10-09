@@ -10,17 +10,20 @@
   --c1:#b4462f; --c1-bg:#fbeee9; --c2:#b7791f; --c2-bg:#fdf4e3; --c3:#2f6db4; --c3-bg:#e9f1fb; --c4:#6b46c1; --c4-bg:#f1ecfb; --c5:#0f7c7c; --c5-bg:#e4f4f3;
   --p0:#c0392b; --p0-bg:#fdecea; --p1:#b9770e; --p1-bg:#fef5e6; --p2:#4a6a8a; --p2-bg:#eaf0f6; --good:#2e7d4f; --good-bg:#e8f5ec;
   --lo:#b4462f; --lo-bg:#fbeee9; --hi:#2f6db4; --hi-bg:#e9f1fb;
+  --wm-bg:#eef2f7; --wm-head:#1f3a66; --dw:#2f6db4; --dm:#b4462f; --dx:#8e8b84;
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ color-scheme:dark;
   --bg:#161614; --surface:#1f1f1c; --surface-2:#282824; --text:#ecebe7; --muted:#a19e96; --line:#34332e;
   --c1:#e78a73; --c1-bg:#3a221c; --c2:#e3b05b; --c2-bg:#382c17; --c3:#7fb0ea; --c3-bg:#1b2a3c; --c4:#b69cf0; --c4-bg:#2a2140; --c5:#6fd1cc; --c5-bg:#15302f;
   --p0:#f08a7e; --p0-bg:#3d1f1b; --p1:#f0c060; --p1-bg:#3a2d14; --p2:#9fb8d2; --p2-bg:#1f2a36; --good:#7fd0a0; --good-bg:#1a3326;
-  --lo:#e78a73; --lo-bg:#3a221c; --hi:#7fb0ea; --hi-bg:#1b2a3c; }}
+  --lo:#e78a73; --lo-bg:#3a221c; --hi:#7fb0ea; --hi-bg:#1b2a3c;
+  --wm-bg:#1c2130; --wm-head:#bcd0ee; --dw:#4a8fd6; --dm:#d8694f; --dx:#9a978f; }}
 :root[data-theme="dark"]{ color-scheme:dark;
   --bg:#161614; --surface:#1f1f1c; --surface-2:#282824; --text:#ecebe7; --muted:#a19e96; --line:#34332e;
   --c1:#e78a73; --c1-bg:#3a221c; --c2:#e3b05b; --c2-bg:#382c17; --c3:#7fb0ea; --c3-bg:#1b2a3c; --c4:#b69cf0; --c4-bg:#2a2140; --c5:#6fd1cc; --c5-bg:#15302f;
   --p0:#f08a7e; --p0-bg:#3d1f1b; --p1:#f0c060; --p1-bg:#3a2d14; --p2:#9fb8d2; --p2-bg:#1f2a36; --good:#7fd0a0; --good-bg:#1a3326;
-  --lo:#e78a73; --lo-bg:#3a221c; --hi:#7fb0ea; --hi-bg:#1b2a3c; }
+  --lo:#e78a73; --lo-bg:#3a221c; --hi:#7fb0ea; --hi-bg:#1b2a3c;
+  --wm-bg:#1c2130; --wm-head:#bcd0ee; --dw:#4a8fd6; --dm:#d8694f; --dx:#9a978f; }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
 body.noscroll{overflow:hidden}
@@ -101,6 +104,29 @@ tr:last-child td{border-bottom:0}
 .cdot{display:inline-block;font-size:11.5px;font-weight:600;border-radius:999px;padding:1px 8px;margin:0 4px 4px 0;white-space:nowrap}
 .d1{color:var(--c1);background:var(--c1-bg)} .d2{color:var(--c2);background:var(--c2-bg)} .d3{color:var(--c3);background:var(--c3-bg)} .d4{color:var(--c4);background:var(--c4-bg)}
 .bar{display:flex;gap:2px;margin-top:4px} .bar i{width:9px;height:9px;border-radius:2px;background:var(--line)} .bar i.on{background:var(--text)}
+/* who we met panel */
+.whomet{background:var(--wm-bg);border:1px solid var(--line);border-radius:16px;padding:20px 22px 18px}
+.whomet h2{text-transform:uppercase;letter-spacing:.04em;font-size:22px;color:var(--wm-head)}
+.whomet .lead{margin-bottom:16px;max-width:none;color:var(--text)}
+.wm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.wm-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px;display:flex;flex-direction:column;gap:8px}
+.wm-wide{margin-top:12px}
+.wm-lab{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--wm-head);margin-bottom:2px}
+.wm-row{display:grid;grid-template-columns:1fr auto;gap:2px 10px;font-size:13px;align-items:end;margin:0 0 4px}
+.wm-row b{font-size:14px;font-variant-numeric:tabular-nums}
+.wm-bar{grid-column:1/3;height:8px;border-radius:4px;background:var(--surface-2);overflow:hidden}
+.wm-bar i{display:block;height:100%;border-radius:4px;background:var(--dw)}
+.wm-donut{display:flex;flex-direction:column;align-items:center;gap:10px}
+.wm-legend{list-style:none;margin:0;padding:0;width:100%;font-size:13px}
+.wm-legend li{display:flex;align-items:center;gap:8px;margin:5px 0}
+.wm-legend li i{width:12px;height:12px;border-radius:50%;flex:none}
+.wm-legend li b{margin-left:auto;font-variant-numeric:tabular-nums} .wm-legend li b span{color:var(--muted);font-weight:400}
+.wm-pills{display:flex;flex-wrap:wrap;gap:10px}
+.wm-pill{flex:1 1 240px;display:flex;align-items:center;gap:10px;background:var(--surface-2);border-radius:12px;padding:10px 14px;font-size:14px;color:var(--text)}
+.wm-pill svg{color:var(--wm-head);flex:none}
+.wm-tag{margin-left:auto;color:#fff;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:4px 12px;white-space:nowrap}
+@media (max-width:1000px){.wm-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.wm-grid{grid-template-columns:1fr}}
 /* demographic strips */
 .demo{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
 .dm{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
@@ -212,7 +238,55 @@ a{color:inherit}
 
 <!-- WHO WE MET -->
 <section id="who">
-<img src="lod_media/img/who_we_met.jpg" alt="Who we met: life stage, gender, time on MCC, how they make content, how they found MCC, phone and account" style="width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block">
+<div class="whomet">
+<h2>Who we met</h2>
+<p class="lead">Demographics pulled from what creators said on tape plus the field team's notes. Blank means it was not asked or not captured. Low earners = not activated (7), posting with low sales (6), and the reseller (1). High earners = the three earning creators, of whom only one clears ₹5K a month, and mostly on Wishlink.</p>
+<div class="wm-grid">
+  <div class="wm-card"><div class="wm-lab">Life stage</div>
+    <div class="wm-row"><span>Students (GenZ)</span><b>5</b><div class="wm-bar"><i style="width:29%"></i></div></div>
+    <div class="wm-row"><span>Home-based / full-time creators</span><b>5</b><div class="wm-bar"><i style="width:29%"></i></div></div>
+    <div class="wm-row"><span>Job holders (shifts, data entry, editing)</span><b>4</b><div class="wm-bar"><i style="width:24%"></i></div></div>
+    <div class="wm-row"><span>Not captured</span><b>3</b><div class="wm-bar"><i style="width:18%"></i></div></div></div>
+  <div class="wm-card"><div class="wm-lab">Gender (in the room)</div>
+    <div class="wm-donut">
+      <svg viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Gender split: 7 women, 7 men, 3 mixed pairs or unclear">
+        <circle cx="60" cy="60" r="44" fill="none" stroke="var(--surface-2)" stroke-width="16"/>
+        <circle cx="60" cy="60" r="44" fill="none" stroke="var(--dw)" stroke-width="16" stroke-dasharray="111.9 276.5" transform="rotate(-90 60 60)"/>
+        <circle cx="60" cy="60" r="44" fill="none" stroke="var(--dm)" stroke-width="16" stroke-dasharray="111.9 276.5" stroke-dashoffset="-113.9" transform="rotate(-90 60 60)"/>
+        <circle cx="60" cy="60" r="44" fill="none" stroke="var(--dx)" stroke-width="16" stroke-dasharray="46.8 276.5" stroke-dashoffset="-227.8" transform="rotate(-90 60 60)"/>
+        <text x="60" y="57" text-anchor="middle" font-size="22" font-weight="700" fill="var(--text)">17</text>
+        <text x="60" y="73" text-anchor="middle" font-size="9" fill="var(--muted)">total met</text>
+      </svg>
+      <ul class="wm-legend">
+        <li><i style="background:var(--dw)"></i>Women <b>7 <span>(41%)</span></b></li>
+        <li><i style="background:var(--dm)"></i>Men <b>7 <span>(41%)</span></b></li>
+        <li><i style="background:var(--dx)"></i>Mixed pairs / unclear <b>3 <span>(18%)</span></b></li>
+      </ul>
+    </div></div>
+  <div class="wm-card"><div class="wm-lab">Time on MCC</div>
+    <div class="wm-row"><span>1–2 months</span><b>5</b><div class="wm-bar"><i style="width:29%"></i></div></div>
+    <div class="wm-row"><span>4–7 months</span><b>5</b><div class="wm-bar"><i style="width:29%"></i></div></div>
+    <div class="wm-row"><span>Under 1 month</span><b>3</b><div class="wm-bar"><i style="width:18%"></i></div></div>
+    <div class="wm-row"><span>Not captured</span><b>4</b><div class="wm-bar"><i style="width:24%"></i></div></div></div>
+  <div class="wm-card"><div class="wm-lab">How they make content</div>
+    <div class="wm-row"><span>Own face (try-on, outfits, lifestyle, gym)</span><b>7</b><div class="wm-bar"><i style="width:41%"></i></div></div>
+    <div class="wm-row"><span>Faceless AI videos (ChatGPT + Flow / Gemini / YT Create)</span><b>5</b><div class="wm-bar"><i style="width:29%"></i></div></div>
+    <div class="wm-row"><span>Story / WhatsApp links only</span><b>2</b><div class="wm-bar"><i style="width:12%"></i></div></div>
+    <div class="wm-row"><span>Reselling, not affiliate</span><b>1</b><div class="wm-bar"><i style="width:6%"></i></div></div></div>
+  <div class="wm-card"><div class="wm-lab">How they found MCC</div>
+    <div class="wm-row"><span>Instagram / YouTube ad</span><b>5</b><div class="wm-bar"><i style="width:29%"></i></div></div>
+    <div class="wm-row"><span>YouTube "earn money" videos / reels</span><b>4</b><div class="wm-bar"><i style="width:24%"></i></div></div>
+    <div class="wm-row"><span>Friends / family</span><b>3</b><div class="wm-bar"><i style="width:18%"></i></div></div>
+    <div class="wm-row"><span>Meesho WhatsApp message</span><b>1</b><div class="wm-bar"><i style="width:6%"></i></div></div></div>
+</div>
+<div class="wm-card wm-wide"><div class="wm-lab">Phone and account (H1)</div>
+  <div class="wm-pills">
+    <div class="wm-pill"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg><span>Own phone, own account</span><b class="wm-tag" style="background:var(--dw)">Most</b></div>
+    <div class="wm-pill"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><circle cx="16.5" cy="9.5" r="2.6"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 20c0-2.6 1.8-4.6 4.5-4.6S21 17.4 21 20"/></svg><span>Shared with a sibling</span><b class="wm-tag" style="background:var(--c5)">3 pairs</b></div>
+    <div class="wm-pill"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg><span>Male relative's phone</span><b class="wm-tag" style="background:var(--muted)">Not seen</b></div>
+  </div>
+  <p class="small muted" style="margin:8px 0 0">H1 was not asked systematically.</p></div>
+</div>
 <div class="tablewrap" style="margin-top:14px">
 <table>
 <thead><tr><th>ID</th><th>Who</th><th>Life stage</th><th>Place</th><th>On MCC</th><th>Platform &amp; content</th><th>Earnings</th><th>Group</th><th>Recordings</th></tr></thead>
