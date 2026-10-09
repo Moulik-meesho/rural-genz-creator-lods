@@ -180,6 +180,24 @@ tr:last-child td{border-bottom:0}
 .prose p{margin:0 0 12px}
 .prose h3{font-size:16.5px;margin:18px 0 6px;line-height:1.3;text-wrap:balance}
 .prose.intro{margin:4px 0 18px}
+/* summary + side-by-side */
+.sum{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.sum-item{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--c3);border-radius:12px;padding:14px 16px}
+.sum-item>b{display:block;font-size:15px;margin-bottom:6px;line-height:1.35}
+.sum-item p{margin:0;font-size:14px;line-height:1.6;color:var(--text)}
+.sum-item p b{color:var(--c3)}
+.sbs{display:grid;grid-template-columns:minmax(240px,340px) 1fr;gap:20px;align-items:start;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.sbs .media{display:grid;gap:10px}
+.sbs .media .vcard video{max-height:420px}
+.sbs .text h3{font-size:17px;margin:0 0 8px}
+.sbs .text>p{font-size:14.5px;line-height:1.65;margin:0 0 10px}
+.ins-box{background:var(--c3-bg);border-radius:10px;padding:10px 14px;margin:8px 0 10px;font-size:13.5px}
+.ins-box>b{display:block;color:var(--c3);font-size:12px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.ins-box ul{margin:0;padding-left:18px} .ins-box li{margin:4px 0}
+.shots.two-up{grid-template-columns:1fr 1fr;margin-top:0}
+.flow.compact .step{flex:1 1 120px;font-size:12.5px;padding:8px 10px}
+.flow.compact .step .shot img{aspect-ratio:9/12}
+@media (max-width:900px){.sum{grid-template-columns:1fr}.sbs{grid-template-columns:1fr}}
 footer{margin-top:40px;font-size:12.5px;color:var(--muted)}
 a{color:inherit}
 @media (max-width:900px){
@@ -200,7 +218,7 @@ a{color:inherit}
 <p>The short version: the creators we met are not short of audience or effort. Several have reels with hundreds of thousands of views, several post two or three times a day, and five of them have taught themselves a four-app AI workflow to make product videos without showing their face. What separates the people earning from the people stalled is whether anyone ever showed them the first working post. Nobody in the sample learned it from Meesho. They learned from YouTube, from a friend, or from us at the table.</p>
 </div>
 <nav class="toc">
-  <a href="#top">Top takeaways</a>
+  <a href="#top">Summary</a>
   <a href="#who">Who we met</a>
   <a href="#s1">1 · Background &amp; motivation</a>
   <a href="#s2">2 · Onboarding &amp; comprehension</a>
@@ -220,28 +238,25 @@ a{color:inherit}
 
 <!-- TOP TAKEAWAYS -->
 <section id="top">
-<h2>Top takeaways</h2>
-<div class="prose">
-<h3>1. The gap between earning and stalled creators is a five-minute walkthrough, not talent or reach</h3>
-<p>Seven of the 17 recorded interviews were with creators who never got a working affiliate post live. Some signed up seven months ago. Creator 8 posted one reel and stopped because she did not know a link was the next step. Creator 1 has movie edits with millions of views and has been on MCC for two months without making a single link. Creator 3 spent five or six months looking for Meesho inside Instagram's own product-tag list, where only Myntra and Flipkart appear, and concluded it could not be done. In every one of these cases the team walked them through it at the table in about five minutes: connect Instagram, pick a product, make the link, post with Auto-DM or a story. The reaction each time was some version of "that's it?". The high earners had the same walkthrough earlier in life, from a friend (Creator 14) or from another affiliate platform (Creator 17). That is the whole difference.</p>
-
-<h3>2. Instagram connect fails for some creators, and the app gives them nothing to do about it</h3>
-<p>We filmed one creator trying to connect Instagram from inside the Meesho app. The Instagram login returned "Can't find account" twice before she retried with her phone number and discovered she also had to switch to a creator account, pick a category and answer "which best describes you". None of this is explained in the app, and a creator doing it alone at home would reasonably assume the feature is broken. Every later step depends on this one, so a silent failure here is a silent loss of the creator.</p>
-
-<h3>3. Rural creators are already faceless AI creators, and the chain is long and fragile</h3>
-<p>Five creators make videos without appearing on camera. Creator 16 showed the full chain on video: screenshot a Meesho product, upload the photos to ChatGPT and ask it to write a video prompt, paste the prompt and the image into Google Flow, wait for a clip of a model walking in the kurti, download it, then make the Meesho link and share to an Instagram story. Creator 4 runs the identical recipe. Creator 13 uses Gemini to generate four outfit images from one product photo. The reasons are consistent: camera shyness, nowhere to shoot, and no cash to order samples. The reasons it breaks are also consistent: downloading the generated video, saving it to the gallery, and knowing which products carry commission. This is a format Meesho could own with a single in-app "make a video from this product" button.</p>
-
-<h3>4. Students are a large part of the GenZ base, and they pause for exams rather than quit</h3>
-<p>Five of the 17 interviews were with students: a nursing student, a B.Tech student from Jammu, a board-exam student, a beauty creator who told us her exams come every two months, and the sister in the brother-and-sister pair who is doing a Master's in Psychology. Their posting stops with the exam calendar and, in most cases, would restart after it. Treating that gap as churn and sending them generic win-back messages misreads what is happening. Two of them also told us their parents allow this only if income shows up, which means the first commission matters more for a student than for anyone else.</p>
-
-<h3>5. Free returns are our strongest hook, and most creators either don't know about them or don't trust them</h3>
-<p>Creator 2 joined specifically for the 14-day return window. At the other end, Creator 5 stopped ordering samples because she was afraid of being charged or blocked for returning too much, and Creator 7 had never heard that creators get 14 days where normal users get seven. Creator 17, the high earner, had her MCC account blocked after a dispute with a local delivery agent who was unhappy with her returns, which is exactly the fear the others described. The benefit exists, the fear exists, and the app does not put the one against the other anywhere a creator would see it.</p>
-
-<h3>6. Views do not turn into sales, and nobody can see why</h3>
-<p>Creator 10 has reels at 716K and 166K views, 1,660 followers, and zero earnings. Nobody asked her for a link, and she had no way of knowing whether the problem was the product, the caption, the call to action or the platform. She checked insights once a week, saw the numbers go nowhere, and stopped. Creator 14, who is earning, showed us an app where several products display 0% commission next to others at 10%. Creator 13 did not know what they earn if the buyer clicks their link and buys something else. Creator 17 prefers Wishlink because it shows daily clicks and orders per brand. The pattern is the same at every level: there is no feedback loop between a post and an outcome, so creators cannot learn.</p>
-
-<h3>7. Trust and safety problems reach creators before we do</h3>
-<p>Creator 17 told us about calls from people claiming to be Meesho's call centre: "your order was delivered but not updated, share the OTP". The OTP triggers a return and the refund goes to the caller's bank account. It happened to her once while she was cooking. She also described her account block after the delivery-agent dispute. None of the creators we met had received any call or message from Meesho since signing up, so the only "Meesho" voice some of them have heard is the scammer's.</p>
+<h2>Summary</h2>
+<p class="lead">What two days with 22 Udaipur creators told us, in order of how much it should change what we do.</p>
+<div class="sum">
+  <div class="sum-item"><b>1. Nobody is lost for want of audience. They are lost at the first post.</b>
+    <p><b>7 of 17</b> recorded interviews were with creators who never got a working affiliate post live, some <b>7 months</b> after sign-up. Every one of them got unstuck in a <b>5-minute walkthrough</b> at the table (connect Instagram, make a link, post with Auto-DM or a story). The earning creators had that walkthrough earlier, from a friend or from Wishlink. <b>None of the 17 learned it from Meesho.</b></p></div>
+  <div class="sum-item"><b>2. Paid acquisition is largely taking credit for organic intent.</b>
+    <p>About <b>70% of the creators we spoke to did not sign up from an ad or an influencer reel</b>. They heard of MCC, went to YouTube, searched "Meesho Creator Club", watched creator-made explainers, and then signed up on their own. Ads and reels are reaching people who were already on their way (cannibalisation), while the channel they actually used, YouTube, has <b>no visible Meesho presence</b>: our YouTube channel is not discoverable, so there is <b>no acquisition happening via YouTube</b> even though that is where the research happens.</p></div>
+  <div class="sum-item"><b>3. Instagram connect fails silently, and the app offers no way out.</b>
+    <p>On video, the Instagram login inside the app returned <b>"Can't find account"</b> twice before the creator retried by phone number and then had to complete a creator-account setup Instagram asked for. At home, alone, this reads as "it's broken". Every later step depends on it.</p></div>
+  <div class="sum-item"><b>4. Rural creators are already faceless AI creators, across four apps.</b>
+    <p><b>5 creators</b> make product videos without showing their face: Meesho product screenshot → ChatGPT writes the prompt → Google Flow or Gemini generates the video or images → download → Meesho link → Instagram story. It takes <b>30–60 minutes per post</b> and breaks at download and at "which product has commission". Reasons: camera shyness, nowhere to shoot, no cash for samples. This is a format we can own with one in-app "video from this product" button.</p></div>
+  <div class="sum-item"><b>5. Students pause for exams; they do not churn.</b>
+    <p><b>5 of 17</b> interviews were with students (nursing, B.Tech, board exams, a Master's, and one whose exams come every two months). Posting stops with the exam calendar and restarts after. Two said parents allow this <b>only if income shows up</b>, so the first commission matters most for them.</p></div>
+  <div class="sum-item"><b>6. Free returns are our best hook and our biggest unspoken fear.</b>
+    <p>One creator joined <b>only for the 14-day return window</b>. Others stopped ordering samples for fear of charges or a block, and one did not know creators get 14 days where users get 7. The high earner's account <b>was blocked</b> after a delivery agent objected to her returns, which is exactly the fear the others described.</p></div>
+  <div class="sum-item"><b>7. Views do not become orders, and there is no feedback loop to learn from.</b>
+    <p>Reels at <b>716K and 166K views</b>, 1,660 followers, <b>₹0 earned and no link requests</b>. An earning creator's app shows <b>0% commission</b> on several products. Another does not know what she earns if the buyer picks a different item. The high earner prefers Wishlink because it shows daily clicks and orders. At every level, creators cannot see why a post did or did not sell.</p></div>
+  <div class="sum-item"><b>8. Scammers reach creators before we do.</b>
+    <p>Fake "Meesho call centre" calls ask for an <b>OTP</b> to "update a delivery", trigger a return, and redirect the refund to their bank account. It happened to the high earner. <b>None of the creators had received a call or message from Meesho</b> since signing up.</p></div>
 </div>
 </section>
 
@@ -285,7 +300,10 @@ a{color:inherit}
     <div class="wm-row"><span>Reselling, not affiliate</span><b>1</b><div class="wm-bar"><i style="width:6%"></i></div></div>
     <div class="wm-row"><span>No MCC content yet</span><b>2</b><div class="wm-bar"><i style="width:12%"></i></div></div></div>
   <div class="wm-card"><div class="wm-lab">How they found MCC</div>
-    <div class="wm-row"><span>Instagram / YouTube ad</span><b>7</b><div class="wm-bar"><i style="width:41%"></i></div></div>
+    <div class="wm-row"><span>Heard of it, researched on YouTube, signed up themselves</span><b>12</b><div class="wm-bar"><i style="width:71%"></i></div></div>
+    <div class="wm-row"><span>Signed up straight from an ad or influencer reel</span><b>4</b><div class="wm-bar"><i style="width:24%"></i></div></div>
+    <div class="wm-row"><span>Friends / family</span><b>1</b><div class="wm-bar"><i style="width:6%"></i></div></div>
+    <p class="small muted" style="margin:4px 0 0">Field-team count across the 17 interviews. Nobody found us through Meesho's own YouTube channel.</p></div>
     <div class="wm-row"><span>YouTube "earn money" videos / reels</span><b>3</b><div class="wm-bar"><i style="width:18%"></i></div></div>
     <div class="wm-row"><span>Friends / family</span><b>1</b><div class="wm-bar"><i style="width:6%"></i></div></div>
     <div class="wm-row"><span>Meesho WhatsApp message</span><b>1</b><div class="wm-bar"><i style="width:6%"></i></div></div>
@@ -299,32 +317,6 @@ a{color:inherit}
   </div>
   <p class="small muted" style="margin:8px 0 0">H1 was not asked systematically.</p></div>
 </div>
-<div class="tablewrap" style="margin-top:14px">
-<table>
-<thead><tr><th>ID</th><th>Who</th><th>Life stage</th><th>Place</th><th>On MCC</th><th>Platform &amp; content</th><th>Earnings</th><th>Group</th><th>Recordings</th></tr></thead>
-<tbody>
-<tr><td><b>Creator 1</b></td><td>Video editor, man, ~4.5K followers, movie edits with millions of views</td><td>Works (editing)</td><td>Udaipur</td><td>~2 months</td><td>IG reels; wants faceless</td><td>₹0</td><td><span class="cdot d1">Not activated</span></td><td><button data-tr="Creator_1" data-title="Creator 1 part 1">Transcript 1</button> <button data-tr="Creator_1_part_2" data-title="Creator 1 part 2">Transcript 2</button></td></tr>
-<tr><td><b>Creator 2</b></td><td>Ethnic-wear creator, woman</td><td>Works 11-hour shifts</td><td>Udaipur</td><td>Recent</td><td>IG reels + Auto-DM, 1 reel / 2–3 days</td><td>Low</td><td><span class="cdot d2">Posting, low sales</span></td><td><button data-tr="CREATOR_2" data-title="Creator 2">Transcript</button></td></tr>
-<tr><td><b>Creator 3</b></td><td>Scooter and vlog creator, man</td><td>—</td><td>Udaipur</td><td>5–6 months</td><td>IG; tags Myntra/Flipkart natively</td><td>₹0</td><td><span class="cdot d1">Not activated</span></td><td><button data-tr="Creator_3" data-title="Creator 3">Transcript</button></td></tr>
-<tr><td><b>Creator 4</b></td><td>Fashion and lifestyle, faceless AI</td><td>—</td><td>Udaipur</td><td>10–15 days</td><td>IG, 2 posts/day; ChatGPT + Google Flow + CallArt</td><td>₹0 so far</td><td><span class="cdot d2">Posting, low sales</span></td><td><button data-tr="Creator_5" data-title="Creator 4">Transcript</button></td></tr>
-<tr><td><b>Creator 5</b></td><td>Nursing student <span class="gz">GenZ</span></td><td>Student; parents disapprove</td><td>Udaipur</td><td>~1 year since sign-up</td><td>IG outfit photos (2–3 posts), stopped</td><td>₹0</td><td><span class="cdot d1">Not activated</span></td><td><button data-tr="Creator_6" data-title="Creator 5">Transcript</button></td></tr>
-<tr><td><b>Creator 6</b></td><td>Lifestyle creator</td><td>—</td><td>Udaipur</td><td>2 months</td><td>IG + YouTube Shorts, 2–3 reels/day</td><td>Low</td><td><span class="cdot d2">Posting, low sales</span></td><td><button data-tr="Creator_7" data-title="Creator 6">Transcript</button></td></tr>
-<tr><td><b>Creator 7</b></td><td>Try-on creator, woman</td><td>—</td><td>Udaipur</td><td>~1 month</td><td>Tried YouTube links; IG not connected</td><td>₹0</td><td><span class="cdot d1">Not activated</span></td><td><button data-tr="Creator_8" data-title="Creator 7">Transcript</button></td></tr>
-<tr><td><b>Creator 8</b></td><td>Data-entry worker</td><td>Works</td><td>Udaipur</td><td>Recent</td><td>IG; 1 reel, then stopped</td><td>₹0</td><td><span class="cdot d1">Not activated</span></td><td><button data-tr="Standard_recording_11" data-title="Creator 8">Transcript</button></td></tr>
-<tr><td><b>Creator 9</b></td><td>B.Tech student from Jammu, man <span class="gz">GenZ</span></td><td>Student</td><td>Studying in Udaipur</td><td>4–5 months</td><td>IG; 1–2 reels so far</td><td>₹0</td><td><span class="cdot d1">Not activated</span></td><td><button data-tr="Standard_recording_13" data-title="Creator 9">Transcript</button></td></tr>
-<tr><td><b>Creator 10</b></td><td>Beauty and outfits, woman; 1,660 followers, reels at 716K and 166K views <span class="gz">GenZ</span></td><td>Student (exams every 2 months)</td><td>Udaipur</td><td>Few months</td><td>IG reels, 1 year on IG; checks insights weekly</td><td>₹0; came for a "₹600" ad</td><td><span class="cdot d2">Posting, low sales</span></td><td><button data-tr="Standard_recording_14" data-title="Creator 10">Transcript</button></td></tr>
-<tr><td><b>Creator 11</b></td><td>Story sharer</td><td>—</td><td>Udaipur</td><td>Recent</td><td>WhatsApp and IG story links, no reels</td><td>Low</td><td><span class="cdot d2">Posting, low sales</span></td><td><button data-tr="Standard_recording_15" data-title="Creator 11">Transcript</button></td></tr>
-<tr><td><b>Creator 12</b></td><td>Two AI creators (short clips)</td><td>—</td><td>Udaipur</td><td>~2 months</td><td>YouTube Create + AI</td><td>Low</td><td><span class="cdot d2">Posting, low sales</span></td><td><button data-tr="Standard_recording_17" data-title="Creator 12 (a)">Creator 12 (a)</button> <button data-tr="Standard_recording_18" data-title="Creator 12 (b)">Creator 12 (b)</button></td></tr>
-<tr><td><b>Creator 13</b></td><td>Himanshi + Rishika, two women</td><td>—</td><td>Udaipur</td><td>Few months</td><td>YouTube + IG; Gemini images, faceless AI + real</td><td>Earning (below ₹5K)</td><td><span class="cdot d3">Earning</span></td><td><button data-tr="Standard_recording_19" data-title="Creator 13">Transcript</button></td></tr>
-<tr><td><b>Creator 14</b></td><td>Hanuman + sister (Master's in Psychology) <span class="gz">GenZ</span></td><td>Student (sister)</td><td>Udaipur</td><td>4–5 months</td><td>IG gym and lifestyle + Auto-DM</td><td>Earning (below ₹5K)</td><td><span class="cdot d3">Earning</span></td><td><button data-tr="Standard_recording_21" data-title="Creator 14">Transcript</button></td></tr>
-<tr><td><b>Creator 15</b></td><td>Board-exam student <span class="gz">GenZ</span></td><td>Student</td><td>Udaipur</td><td>1 month</td><td>FB Marketplace reselling + FB ads</td><td>Margin on resale</td><td><span class="cdot d4">Reseller</span></td><td><button data-tr="Standard_recording_22" data-title="Creator 15">Transcript</button></td></tr>
-<tr><td><b>Creator 16</b></td><td>AI faceless creator, man</td><td>Has a day job; came wanting to sell</td><td>Udaipur</td><td>7 months</td><td>IG; ChatGPT + Google Flow</td><td>₹0</td><td><span class="cdot d1">Not activated</span></td><td><button data-tr="Standard_recording_24" data-title="Creator 16">Transcript</button></td></tr>
-<tr><td><b>Creator 17</b></td><td>Jewellery and fashion creator, woman</td><td>Full-time creator</td><td>Udaipur</td><td>Long-time</td><td>IG; Wishlink + MCC</td><td>~₹20K/month, mostly Wishlink</td><td><span class="cdot d3">Earning</span></td><td><button data-tr="Standard_recording_25" data-title="Creator 17 (a)">Creator 17 (a)</button> <button data-tr="Standard_recording_26" data-title="Creator 17 (b)">Creator 17 (b)</button></td></tr>
-</tbody>
-</table>
-</div>
-<p class="small muted">Creators are numbered in the order of this table; the five creators we met without a recording are not listed. The transcript drawer shows the original recording file name next to each one. Life stage and place are filled only where stated on tape or in the field notes.</p>
-
 </section>
 
 <!-- SECTION 1 -->
@@ -343,7 +335,7 @@ a{color:inherit}
     <div class="gq">What do you do, how does your day go?</div><div class="lo-c">Jobs with long shifts (Creator 2: 11 hours; Creator 8: data entry), students around exams (Creator 5, Creator 15), a video editor (Creator 1). MCC fits into leftover time.</div><div class="hi-c">Content is the day job or close to it. Creator 17 runs jewellery and fashion content full time; Creator 14 posts daily gym and lifestyle reels.</div>
     <div class="gq">Since when on Instagram, who follows you?</div><div class="lo-c">Long-time Instagram users with real audiences (Creator 1 since ~2017, 4.5K followers and movie edits with millions of views; Creator 10 with 716K-view reels). Audience is not the constraint.</div><div class="hi-c">Similar audience sizes. The difference is that the audience is already used to product links and DMs.</div>
     <div class="gq">How did you hear about MCC?</div><div class="lo-c">Ads and "earn money" videos: IG ad (Creator 8, Creator 11), a "₹600" ad (Creator 10), YouTube ad (Creator 15), YouTube earn-money videos (Creator 16). Creator 1 opened a Meesho WhatsApp message by accident.</div><div class="hi-c">Friends (Creator 14) and existing affiliate work on Wishlink (Creator 17). They came with a mental model of affiliate already.</div>
-    <div class="gq">How much did you expect, how much now?</div><div class="lo-c">Expectations set by ads and reels: "order a product, make a video, earn". Reality: ₹0 for 6 of 13 and under a few hundred for the rest. Creator 10 quit after views didn't become link requests.</div><div class="hi-c">Creator 17 earns ~₹20K a month, but most of it on Wishlink; MCC is a second channel and was blocked. Creator 13 and Creator 14 are below ₹5K and unsure what each order pays.</div>
+    <div class="gq">How much did you expect, how much now?</div><div class="lo-c">Expectations set by ads and reels: "order a product, make a video, earn". Reality: ₹0 for 7 of 14 and under a few hundred for the rest. Creator 10 quit after views didn't become link requests.</div><div class="hi-c">Creator 17 earns ~₹20K a month, but most of it on Wishlink; MCC is a second channel and was blocked. Creator 13 and Creator 14 are below ₹5K and unsure what each order pays.</div>
     <div class="gq">Whose phone, who runs the account?</div><div class="lo-c">Own phones in every interview we captured. Pairs (brother and sister, two sisters) share the work, not a male relative's phone. Not asked systematically.</div><div class="hi-c">Own phones. Creator 14's sister runs part of the account with him.</div>
   </div>
   <div class="qa">
@@ -367,7 +359,7 @@ a{color:inherit}
       <button class="q" data-file="Creator_3" data-start="239" data-end="247"><span class="pl">▶</span><span><i>"Kis pe content banate hain?" "Scooty chalate hain."</i><span class="en">Creator 3's content is scooter rides and vlogs, with no product angle so far.</span><span class="who">Creator 3 · 03:54</span></span><span class="qp"></span></button>
       <button class="q" data-file="Standard_recording_11" data-start="0" data-end="30"><span class="pl">▶</span><span><i>"Aap kya karte ho?" "…data entry… channel creator shuru karna…" "Matlab sirf sign-up karke rakha hai?" "Ek reel post ki hai."</i><span class="en">Signed up, posted one reel, nothing since.</span><span class="who">Creator 8 · 00:00</span></span><span class="qp"></span></button>
     </div>
-    <p class="small muted">Every creator's full transcript is one click away in the table above.</p>
+    <p class="small muted">Every creator's full transcript is one click away in the Creator by creator cards below.</p>
     </div></details>
   </div>
 </div>
@@ -394,46 +386,68 @@ a{color:inherit}
   </div>
 </div>
 
-<h3 style="margin-top:18px" id="v2">On video: Instagram connect fails inside the app</h3>
-<p class="lead">6 Oct, 4:28 pm. The team walks a creator (Gudiya Gupta, creator ID 70867838, from the recruitment sheet; her login is on screen) through Creator → Connect Instagram. The Instagram login inside the Meesho app returns "Can't find account" until she retries with her number and completes the creator-account setup.</p>
-<div class="vgrid">
-  <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v2_cantfind.jpg" src="lod_media/clips/ig_connect_cant_find_account.mp4"></video><div class="vb"><b>IG connect: "Can't find account"</b><p>55 s clip · Login inside the app fails on the first attempts.</p></div></div>
-  <div class="shot" data-full="lod_media/img/v2_cantfind.jpg" data-cap="Instagram login inside the Meesho app: Can't find account"><img src="lod_media/img/v2_cantfind.jpg" alt="Can't find account dialog"><span>"Can't find account" on IG login</span></div>
-  <div class="shot" data-full="lod_media/img/v2_describes.jpg" data-cap="Instagram asks 'Which best describes you?' during creator-account setup"><img src="lod_media/img/v2_describes.jpg" alt="Which best describes you"><span>Creator-account setup steps she had never done</span></div>
-  <div class="shot" data-full="lod_media/img/v2_connect.jpg" data-cap="Finally at 'Connect your account' after retrying"><img src="lod_media/img/v2_connect.jpg" alt="Connect your account"><span>"Connect your account" after retries</span></div>
+<div class="sbs" id="v2">
+  <div class="media">
+    <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v2_cantfind.jpg" src="lod_media/clips/ig_connect_cant_find_account.mp4"></video><div class="vb"><b>IG connect: "Can't find account"</b><p>55 s clip · 6 Oct, 4:28 pm</p></div></div>
+    <div class="shots two-up">
+      <div class="shot" data-full="lod_media/img/v2_describes.jpg" data-cap="Instagram asks 'Which best describes you?' during creator-account setup"><img src="lod_media/img/v2_describes.jpg" alt="Which best describes you"><span>Creator-account setup she had never done</span></div>
+      <div class="shot" data-full="lod_media/img/v2_connect.jpg" data-cap="Finally at 'Connect your account' after retrying"><img src="lod_media/img/v2_connect.jpg" alt="Connect your account"><span>"Connect your account" after retries</span></div>
+    </div>
+  </div>
+  <div class="text">
+    <h3>Instagram connect fails inside the app</h3>
+    <p>The team walks Gudiya Gupta (creator ID 70867838) through Creator → Connect Instagram. The Instagram login inside the Meesho app returns "Can't find account" until she retries with her phone number, and Instagram then asks her to set up a creator account, pick a category and answer "which best describes you". None of this is explained in the app.</p>
+    <div class="ins-box"><b>What this means</b>
+      <ul><li>A creator doing this alone at home would conclude the feature is broken and stop. Every later step depends on this one.</li>
+      <li>The error comes from Instagram, but the fix (retry with phone number, finish creator-account setup) is predictable and could be shown in the app.</li>
+      <li>Nobody we met had been told that an Instagram creator or business account is needed.</li></ul></div>
+  </div>
 </div>
 
-<h3 style="margin-top:22px" id="v1">On video: creators look for Meesho inside Instagram's own product tags</h3>
-<p class="lead">6 Oct, 2:27 pm. Creator 1 shows how he tags products on Instagram: Edit → add product → search. Myntra and Flipkart products appear; Meesho does not. He also shows Instagram's "branded content" settings. This is where a creator with millions of views expects affiliate to live.</p>
-<div class="vgrid">
-  <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v1_tagging.jpg" src="lod_media/clips/ig_native_product_tag.mp4"></video><div class="vb"><b>Instagram native product tagging</b><p>70 s clip · "Meesho ka link bhi aayega kya?" He searches and can't find it.</p></div></div>
-  <div class="shot" data-full="lod_media/img/v1_tagging.jpg" data-cap="Instagram's add-product list in the reel editor"><img src="lod_media/img/v1_tagging.jpg" alt="Instagram product list"><span>Instagram's product list in the reel editor</span></div>
-</div>
-<div class="qs">
-  <button class="q" data-file="Creator_1" data-start="242" data-end="274"><span class="pl">▶</span><span><i>"Yeh kaun sa app hai? Instagram hi… usme product link, shopping link… Meesho ka link bhi aayega kya? Search karna… nahi aa raha."</i><span class="en">He looks for Meesho inside Instagram's shopping-link search and it is not there.</span><span class="who">Creator 1 · 04:02</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_1" data-start="138" data-end="172"><span class="pl">▶</span><span><i>"Meesho ka kaise bana sakte hain? … pehle product ka unboxing-type video, phir Auto-DM ho gaya, story ho gaya…"</i><span class="en">The team explains the first post: unboxing-style video, then Auto-DM or story with the link. He had not done any of it in two months.</span><span class="who">Creator 1 · 02:18</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_1_part_2" data-start="40" data-end="56"><span class="pl">▶</span><span><i>"Seekhne ke liye kahan jaoge? … YouTube pe hi search karta tha."</i><span class="en">When he needs to learn something, he searches YouTube, not Meesho.</span><span class="who">Creator 1 · part 2 · 00:40</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Standard_recording_15" data-start="73" data-end="90"><span class="pl">▶</span><span><i>"Aapne Instagram connect kiya hua hai, woh bhi aapne YouTube se hi seekha."</i><span class="en">Even IG connect was learned from a YouTube tutorial.</span><span class="who">Creator 11 · 01:13</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Standard_recording_11" data-start="37" data-end="47"><span class="pl">▶</span><span><i>"Kya samajh nahi aa raha, kya issue ho raha hai?" "Aapne link generate kiye?" "Kuch bhi generate nahi kiya."</i><span class="en">She never generated a link; she did not know that was the step after posting.</span><span class="who">Creator 8 · 00:37</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_7" data-start="42" data-end="63"><span class="pl">▶</span><span><i>"YouTube pe maine links bana ke paste karne ki koshish ki… Instagram pe video bana rahi hoon par uski link generate nahi ho rahi, connect kaise karun."</i><span class="en">Posting daily on both platforms, but could not generate or attach the link on either.</span><span class="who">Creator 6 · 00:42</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_8" data-start="241" data-end="264"><span class="pl">▶</span><span><i>"YouTube ka bana ke… phir Meesho pe gayi, product ke liye link mil gayi… top pehna, video daali, link copy karke…"</i><span class="en">Creator 7 did everything right on YouTube, where the link does not work.</span><span class="who">Creator 7 · 04:01</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_5" data-start="33" data-end="64"><span class="pl">▶</span><span><i>"Aapko kaise pata chalta hai ki is product pe commission hai ki nahi?" "…AI se photo banayi… link kuch-kuch karke bana diya tha, itna idea nahi hai."</i><span class="en">Posting twice a day without knowing which products carry commission or how the link was made.</span><span class="who">Creator 4 · 00:33</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_5" data-start="159" data-end="184"><span class="pl">▶</span><span><i>"Aapne red kurti ka banaya, maine link pe click kiya, scroll karke green kurti kharid li, toh alag commission milta hai… agar uske koi commission nahi toh nahi milta."</i><span class="en">The team explaining attribution for the first time, two weeks in.</span><span class="who">Creator 4 · 02:39</span></span><span class="qp"></span></button>
-  <button class="q" data-file="CREATOR_2" data-start="314" data-end="335"><span class="pl">▶</span><span><i>"Koi aapki link pe click karke… usne blue saree kharidi toh aapko nahi milta hai." "Yeh nahi pata tha."</i><span class="en">Creator 2 had not known the commission rule after weeks of posting with Auto-DM.</span><span class="who">Creator 2 · 05:14</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_3" data-start="345" data-end="385"><span class="pl">▶</span><span><i>"Kis pe commission rehta hai, pata hai?" "Mere mein toh Myntra ka aur Flipkart ka diya hua hai… Meesho ke product pe rupay milenge, bana paayenge toh…"</i><span class="en">Creator 3 thought affiliate lived inside Instagram's tag list, where only Myntra and Flipkart appear.</span><span class="who">Creator 3 · 05:45</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_3" data-start="574" data-end="600"><span class="pl">▶</span><span><i>"Meesho kholo… is pe baarah percent milega, is pe das percent… ek becho toh jitne ka hai uska das percent aapko dega."</i><span class="en">The 5-minute walkthrough: commission rates, link, Auto-DM, story. He had never opened this screen.</span><span class="who">Creator 3 · 09:34</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_6" data-start="393" data-end="436"><span class="pl">▶</span><span><i>"Agar main product mangata hoon aur return kar doon toh…?" "Jab aap creator hote ho, aapke liye return chaudah din ke rehte hain, user ke liye saat din."</i><span class="en">Creator 5 stopped ordering samples out of fear; the 14-day creator return window was news.</span><span class="who">Creator 5 · 06:33</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_6" data-start="702" data-end="720"><span class="pl">▶</span><span><i>"Kabhi Meesho ki taraf se call ya message aaya?" "Nahi."</i><span class="en">No outreach from Meesho in the months since sign-up. Same answer from Creator 3 at 14:03.</span><span class="who">Creator 5 · 11:42</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_8" data-start="483" data-end="514"><span class="pl">▶</span><span><i>"Aap creator ho toh 14 din tak return kar sakte ho… buy now pay later… ek mahine tak Meesho balance se katega."</i><span class="en">Creator benefits (14-day returns, BNPL for samples) explained in person for the first time.</span><span class="who">Creator 7 · 08:03</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Standard_recording_24" data-start="722" data-end="750"><span class="pl">▶</span><span><i>"YouTube se samjha tha… unki language se samajh nahi aaya, first baar mein apne ko bhi nahi aata."</i><span class="en">YouTube tutorials were the only teacher, and their language did not land.</span><span class="who">Creator 16 · 12:02</span></span><span class="qp"></span></button>
+<div class="sbs" id="v1">
+  <div class="media">
+    <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v1_tagging.jpg" src="lod_media/clips/ig_native_product_tag.mp4"></video><div class="vb"><b>Instagram's native product tagging</b><p>70 s clip · 6 Oct, 2:27 pm</p></div></div>
+  </div>
+  <div class="text">
+    <h3>Creators look for Meesho inside Instagram's own product tags</h3>
+    <p>Creator 1 shows how he expects affiliate to work: Edit → add product → search. Myntra and Flipkart products appear; Meesho does not. He also shows Instagram's branded-content settings. This is where a creator with millions of views on his edits went looking, and why he has not made a single Meesho link in two months. Creator 3 did the same for five or six months.</p>
+    <div class="ins-box"><b>What this means</b>
+      <ul><li>Creators' mental model of "product link" lives in Instagram, not in a separate app. The Meesho app is a detour they do not know they need to take.</li>
+      <li>Being absent from Instagram's product catalogue costs us the creators who are most Instagram-native.</li>
+      <li>Learning happens on YouTube: even Instagram connect was learned from a tutorial, never from Meesho.</li></ul></div>
+    <div class="qs">
+<button class="q" data-file="Creator_1" data-start="242" data-end="274"><span class="pl">▶</span><span><i>"Yeh kaun sa app hai? Instagram hi… usme product link, shopping link… Meesho ka link bhi aayega kya? Search karna… nahi aa raha."</i><span class="en">He looks for Meesho inside Instagram's shopping-link search and it is not there.</span><span class="who">Creator 1 · 04:02</span></span><span class="qp"></span></button>
+<button class="q" data-file="Creator_1_part_2" data-start="40" data-end="56"><span class="pl">▶</span><span><i>"Seekhne ke liye kahan jaoge? … YouTube pe hi search karta tha."</i><span class="en">When he needs to learn something, he searches YouTube, not Meesho.</span><span class="who">Creator 1 · part 2 · 00:40</span></span><span class="qp"></span></button>
+<button class="q" data-file="Standard_recording_15" data-start="73" data-end="90"><span class="pl">▶</span><span><i>"Aapne Instagram connect kiya hua hai, woh bhi aapne YouTube se hi seekha."</i><span class="en">Even IG connect was learned from a YouTube tutorial.</span><span class="who">Creator 11 · 01:13</span></span><span class="qp"></span></button>
+<button class="q" data-file="Creator_7" data-start="42" data-end="63"><span class="pl">▶</span><span><i>"YouTube pe maine links bana ke paste karne ki koshish ki… Instagram pe video bana rahi hoon par uski link generate nahi ho rahi, connect kaise karun."</i><span class="en">Posting daily on both platforms, but could not generate or attach the link on either.</span><span class="who">Creator 6 · 00:42</span></span><span class="qp"></span></button>
+<button class="q" data-file="Creator_3" data-start="345" data-end="385"><span class="pl">▶</span><span><i>"Kis pe commission rehta hai, pata hai?" "Mere mein toh Myntra ka aur Flipkart ka diya hua hai…"</i><span class="en">Creator 3 thought affiliate lived inside Instagram's tag list, where only Myntra and Flipkart appear.</span><span class="who">Creator 3 · 05:45</span></span><span class="qp"></span></button>
+<button class="q" data-file="Creator_6" data-start="702" data-end="720"><span class="pl">▶</span><span><i>"Kabhi Meesho ki taraf se call ya message aaya?" "Nahi."</i><span class="en">No outreach from Meesho in the months since sign-up. Same answer from Creator 3 at 14:03.</span><span class="who">Creator 5 · 11:42</span></span><span class="qp"></span></button>
+    </div>
+  </div>
 </div>
 
-<h3 style="margin-top:22px" id="v3">On video: an earning creator shows commission and Auto-DM</h3>
-<p class="lead">7 Oct, 10:25 am. Creator 14 (Hanuman) on a cracked phone shows the Meesho app flow he uses daily: pick products, create the link, set up "Send commission links automatically to DMs". Several products in his app show 0% commission while others show 10%, which is the bug flagged in the field notes.</p>
-<div class="vgrid">
-  <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v3_autodm.jpg" src="lod_media/clips/commission_and_autodm_sr21.mp4"></video><div class="vb"><b>Creator 14: commission and Auto-DM setup</b><p>85 s clip · The flow an active creator runs 2–3 times a day.</p></div></div>
-  <div class="shot" data-full="lod_media/img/v3_autodm.jpg" data-cap="Auto-DM: 'Send commission links automatically to DMs'"><img src="lod_media/img/v3_autodm.jpg" alt="Auto-DM screen"><span>"Send commission links automatically to DMs"</span></div>
-  <div class="shot" data-full="lod_media/img/v3_home.jpg" data-cap="Meesho home with the sale banner on Creator 14's phone"><img src="lod_media/img/v3_home.jpg" alt="Meesho home"><span>His daily starting point: Meesho home and sale banner</span></div>
+<div class="sbs" id="v3">
+  <div class="media">
+    <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v3_autodm.jpg" src="lod_media/clips/commission_and_autodm_sr21.mp4"></video><div class="vb"><b>Creator 14: commission and Auto-DM setup</b><p>85 s clip · 7 Oct, 10:25 am</p></div></div>
+    <div class="shots two-up">
+      <div class="shot" data-full="lod_media/img/v3_autodm.jpg" data-cap="Auto-DM: 'Send commission links automatically to DMs'"><img src="lod_media/img/v3_autodm.jpg" alt="Auto-DM screen"><span>"Send commission links automatically to DMs"</span></div>
+      <div class="shot" data-full="lod_media/img/v3_home.jpg" data-cap="Meesho home with the sale banner on Creator 14's phone"><img src="lod_media/img/v3_home.jpg" alt="Meesho home"><span>His daily starting point</span></div>
+    </div>
+  </div>
+  <div class="text">
+    <h3>An earning creator shows the flow, and the 0% commission</h3>
+    <p>Creator 14 (Hanuman) on a cracked phone runs the flow he does two or three times a day: pick products, create the link, switch on "Send commission links automatically to DMs". Several products in his app show 0% commission next to others at 10%, and he cannot tell whether that is a bug or a rule.</p>
+    <div class="ins-box"><b>What this means</b>
+      <ul><li>The flow itself is fast once learned: under a minute, no talking. The gap is not UI complexity, it is that nobody showed the others.</li>
+      <li>0% commission on live products is either a display bug or an unexplained rule; either way it tells an active creator to stop posting those products.</li>
+      <li>Commission rules (what if the buyer picks another item?) were unknown even to earning creators.</li></ul></div>
+    <div class="qs">
+<button class="q" data-file="Creator_5" data-start="159" data-end="184"><span class="pl">▶</span><span><i>"Aapne red kurti ka banaya, maine link pe click kiya, scroll karke green kurti kharid li, toh alag commission milta hai… agar uske koi commission nahi toh nahi milta."</i><span class="en">The team explaining attribution for the first time, two weeks in.</span><span class="who">Creator 4 · 02:39</span></span><span class="qp"></span></button>
+<button class="q" data-file="CREATOR_2" data-start="314" data-end="335"><span class="pl">▶</span><span><i>"Koi aapki link pe click karke… usne blue saree kharidi toh aapko nahi milta hai." "Yeh nahi pata tha."</i><span class="en">Creator 2 had not known the commission rule after weeks of posting with Auto-DM.</span><span class="who">Creator 2 · 05:14</span></span><span class="qp"></span></button>
+<button class="q" data-file="Standard_recording_11" data-start="37" data-end="47"><span class="pl">▶</span><span><i>"Aapne link generate kiye?" "Kuch bhi generate nahi kiya."</i><span class="en">She never generated a link; she did not know that was the step after posting.</span><span class="who">Creator 8 · 00:37</span></span><span class="qp"></span></button>
+<button class="q" data-file="Creator_6" data-start="393" data-end="436"><span class="pl">▶</span><span><i>"Agar main product mangata hoon aur return kar doon toh…?" "Creator ke liye return chaudah din, user ke liye saat din."</i><span class="en">Creator 5 stopped ordering samples out of fear; the 14-day creator return window was news.</span><span class="who">Creator 5 · 06:33</span></span><span class="qp"></span></button>
+    </div>
+  </div>
 </div>
 </section>
 
@@ -457,48 +471,61 @@ a{color:inherit}
   </div>
 </div>
 
-<h3 style="margin-top:18px" id="v5">On video: the faceless AI chain, end to end</h3>
-<p class="lead">7 Oct, 11:24 am. Creator 16 (7 months on MCC, no sales yet) shows exactly how he makes a video without showing his face. It takes four apps and a saved prompt. The output looks like a real model walking in the kurti. He then makes the commission link and shares it to his Instagram story.</p>
-<div class="flow">
-  <div class="step"><b>1 · Pick the product</b>Meesho product page, screenshot of the kurti.<div class="shot" data-full="lod_media/img/v5_product.jpg" data-cap="Step 1: the Meesho product used as the reference image"><img src="lod_media/img/v5_product.jpg" alt="Meesho product page"></div></div>
-  <div class="step"><b>2 · ChatGPT prompt</b>He keeps saved prompts ("Prompt 1 – Front Walk") and asks ChatGPT to write the video prompt.<div class="shot" data-full="lod_media/img/v5_prompt.jpg" data-cap="Step 2: saved ChatGPT prompts for the video generator"><img src="lod_media/img/v5_prompt.jpg" alt="ChatGPT prompt"></div></div>
-  <div class="step"><b>3 · Google Flow</b>Pastes the prompt and the photo into Google Flow (learned from YouTube).<div class="shot" data-full="lod_media/img/v5_flow.jpg" data-cap="Step 3: Google Flow in the browser"><img src="lod_media/img/v5_flow.jpg" alt="Google Flow"></div></div>
-  <div class="step"><b>4 · Generated video</b>A model walks in the same kurti. Downloading and saving this is where he got stuck for weeks.<div class="shot" data-full="lod_media/img/v5_aivideo.jpg" data-cap="Step 4: the AI-generated video in his gallery"><img src="lod_media/img/v5_aivideo.jpg" alt="AI generated video"></div></div>
-  <div class="step"><b>5 · Meesho link</b>Get commission link → select products → "Link created!"<div class="shot" data-full="lod_media/img/v5_linkcreated.jpg" data-cap="Step 5: Link created, Share on Insta Story"><img src="lod_media/img/v5_linkcreated.jpg" alt="Link created"></div></div>
-  <div class="step"><b>6 · Instagram</b>Shares to story. Notifications are off on his Instagram, so DMs and comments go unseen.<div class="shot" data-full="lod_media/img/v5_instagram.jpg" data-cap="Step 6: Instagram with notifications turned off"><img src="lod_media/img/v5_instagram.jpg" alt="Instagram"></div></div>
-</div>
-<div class="vgrid">
-  <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v5_prompt.jpg" src="lod_media/clips/ai_chain_product_to_prompt.mp4"></video><div class="vb"><b>Steps 1–3: product → ChatGPT → Google Flow</b><p>90 s clip · "Mujhe prompt bana ke diya… Google Flow… YouTube se dekha tha."</p></div></div>
-  <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v5_aivideo.jpg" src="lod_media/clips/ai_video_to_link_to_story.mp4"></video><div class="vb"><b>Steps 4–6: video → link → Insta story</b><p>105 s clip · From the generated video to "Share on Insta Story".</p></div></div>
-</div>
-<div class="qs">
-  <button class="q" data-file="VID_20261007_112443189" data-start="72" data-end="110"><span class="pl">▶</span><span><i>"Mujhe prompt bana ke diya… ab karke video ke liye dikha do… Google Flow… yeh aapne YouTube se dekha tha? Haan."</i><span class="en">ChatGPT writes the prompt, Google Flow makes the video, and the whole method came from YouTube.</span><span class="who">Video 5 · 01:12</span></span><span class="qp"></span></button>
-  <button class="q" data-file="VID_20261007_112443189" data-start="246" data-end="262"><span class="pl">▶</span><span><i>"Meesho pe jaake usko jo Meesho ka hai usse attach karwa dete hain Instagram se, ek baar karke dikhaunga."</i><span class="en">He demonstrates attaching the Meesho link to the Instagram post.</span><span class="who">Video 5 · 04:06</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Standard_recording_24" data-start="350" data-end="420"><span class="pl">▶</span><span><i>"Product ka screenshot le liya… ChatGPT pe chaaron photo upload kar di… usne mujhe prompt bana ke diya… phir Google Flow."</i><span class="en">The same chain in his own words, in the interview recording.</span><span class="who">Creator 16 · 05:50</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Standard_recording_24" data-start="539" data-end="552"><span class="pl">▶</span><span><i>"…download nahi ho raha tha."</i><span class="en">Where the chain broke for him: getting the generated video out of Flow and into the gallery.</span><span class="who">Creator 16 · 08:59</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_5" data-start="423" data-end="442"><span class="pl">▶</span><span><i>"ChatGPT se prompt likhwa ke… woh prompt Flow mein daalte hain, photo ke saath."</i><span class="en">Creator 4 runs the identical ChatGPT-to-Flow recipe.</span><span class="who">Creator 4 · 07:03</span></span><span class="qp"></span></button>
-</div>
-
-<h3 style="margin-top:22px">Posting habits in their words</h3>
-<div class="qs">
-  <button class="q" data-file="CREATOR_2" data-start="152" data-end="171"><span class="pl">▶</span><span><i>"Ek post banane mein kitna time lag jaata hai?" "Poora din… teen ghante lag jaate hain."</i><span class="en">Three hours per post around an 11-hour shift, so one reel every three days.</span><span class="who">Creator 2 · 02:32</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_7" data-start="444" data-end="470"><span class="pl">▶</span><span><i>"Aadhe ghante… paanch-chhe videos ek din mein shoot karke rakh leti hoon, edit karna hota hai bas." "Commission wali cheez pata hai?" "Nahi."</i><span class="en">Creator 6 batch-shoots 5–6 videos in a sitting and posts 2–3 a day, without knowing the commission.</span><span class="who">Creator 6 · 07:24</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_6" data-start="200" data-end="212"><span class="pl">▶</span><span><i>"Mere ko zyada chal nahi raha tha, toh phir maine chhod diya."</i><span class="en">Stopped after a few posts with no reach.</span><span class="who">Creator 5 · 03:20</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_6" data-start="656" data-end="690"><span class="pl">▶</span><span><i>"Pehle do-teen post ki thi, phir reach nahi aayi, kamai nahi hui, isliye chhod diya."</i><span class="en">The stop reason in one line: no reach, no income, no reason to continue.</span><span class="who">Creator 5 · 10:56</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Standard_recording_14" data-start="378" data-end="392"><span class="pl">▶</span><span><i>"…start of the exam… two months, then new semester."</i><span class="en">Creator 10 is a student too; posting pauses with the exam calendar.</span><span class="who">Creator 10 · 06:18</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Standard_recording_14" data-start="489" data-end="500"><span class="pl">▶</span><span><i>"Aapka motivation isliye gira ki clicks nahi aa rahe the, toh aapne band kar diya."</i><span class="en">716K views, no clicks, no feedback, stopped.</span><span class="who">Creator 10 · 08:09</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Standard_recording_26" data-start="165" data-end="186"><span class="pl">▶</span><span><i>"Pehle jab main zyada create karti thi, ek din mein das se pandrah (orders aate the)… abhi kam kar diya hai."</i><span class="en">The high earner: 10–15 orders a day when posting heavily; volume fell when she cut back after the block.</span><span class="who">Creator 17 (b) · 02:45</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Standard_recording_26" data-start="0" data-end="70"><span class="pl">▶</span><span><i>"Meesho ke call center se scam calls… 'aapne product order kiya hai, deliver ho gaya but update nahi hua, OTP do'… woh return kar dega aur payment apne bank account mein daal dega."</i><span class="en">The OTP refund scam, explained by the creator it happened to ("main khana bana rahi thi, OTP de diya").</span><span class="who">Creator 17 (b) · 00:00</span></span><span class="qp"></span></button>
-  <button class="q" data-file="Creator_7" data-start="764" data-end="795"><span class="pl">▶</span><span><i>"Sale aa rahi hai Meesho ki 9 October se… sale pe hamare creators teen guna zyada kamaate hain."</i><span class="en">The sale-week pitch that landed with active creators.</span><span class="who">Creator 6 · 12:44</span></span><span class="qp"></span></button>
+<div class="sbs" id="v5">
+  <div class="media">
+    <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v5_prompt.jpg" src="lod_media/clips/ai_chain_product_to_prompt.mp4"></video><div class="vb"><b>Steps 1–3: product → ChatGPT → Google Flow</b><p>90 s clip · 7 Oct, 11:24 am</p></div></div>
+    <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v5_aivideo.jpg" src="lod_media/clips/ai_video_to_link_to_story.mp4"></video><div class="vb"><b>Steps 4–6: video → link → Insta story</b><p>105 s clip</p></div></div>
+  </div>
+  <div class="text">
+    <h3>The faceless AI chain, end to end</h3>
+    <p>Creator 16 (7 months on MCC, no sales yet) shows exactly how he makes a video without showing his face. It takes four apps and a saved prompt, and the output looks like a real model walking in the kurti.</p>
+    <div class="flow compact">
+      <div class="step"><b>1 · Product</b>Screenshot the Meesho product page.<div class="shot" data-full="lod_media/img/v5_product.jpg" data-cap="Step 1: the Meesho product used as the reference image"><img src="lod_media/img/v5_product.jpg" alt="Meesho product page"></div></div>
+      <div class="step"><b>2 · ChatGPT</b>Saved prompts ("Prompt 1 – Front Walk"); ChatGPT writes the video prompt.<div class="shot" data-full="lod_media/img/v5_prompt.jpg" data-cap="Step 2: saved ChatGPT prompts"><img src="lod_media/img/v5_prompt.jpg" alt="ChatGPT prompt"></div></div>
+      <div class="step"><b>3 · Google Flow</b>Prompt + photo in; learned from YouTube.<div class="shot" data-full="lod_media/img/v5_flow.jpg" data-cap="Step 3: Google Flow"><img src="lod_media/img/v5_flow.jpg" alt="Google Flow"></div></div>
+      <div class="step"><b>4 · Video</b>A model walks in the kurti. Downloading it is where he got stuck for weeks.<div class="shot" data-full="lod_media/img/v5_aivideo.jpg" data-cap="Step 4: the generated video"><img src="lod_media/img/v5_aivideo.jpg" alt="AI generated video"></div></div>
+      <div class="step"><b>5 · Link</b>Get commission link → select products → "Link created!"<div class="shot" data-full="lod_media/img/v5_linkcreated.jpg" data-cap="Step 5: Link created, Share on Insta Story"><img src="lod_media/img/v5_linkcreated.jpg" alt="Link created"></div></div>
+      <div class="step"><b>6 · Instagram</b>Shares to story. His notifications are off, so DMs go unseen.<div class="shot" data-full="lod_media/img/v5_instagram.jpg" data-cap="Step 6: Instagram with notifications off"><img src="lod_media/img/v5_instagram.jpg" alt="Instagram"></div></div>
+    </div>
+    <div class="ins-box"><b>What this means</b>
+      <ul><li>30–60 minutes and four apps per post, versus 10–30 minutes for a creator with the product in hand.</li>
+      <li>It breaks at download and at knowing which products carry commission, not at creativity.</li>
+      <li>Creator 4 runs the identical recipe; Creator 13 does it with Gemini images. A "make a video from this product" button inside the app would collapse the chain to one tap.</li></ul></div>
+    <div class="qs">
+<button class="q" data-file="Standard_recording_24" data-start="350" data-end="420"><span class="pl">▶</span><span><i>"Product ka screenshot le liya… ChatGPT pe chaaron photo upload kar di… usne mujhe prompt bana ke diya… phir Google Flow."</i><span class="en">The chain in his own words.</span><span class="who">Creator 16 · 05:50</span></span><span class="qp"></span></button>
+<button class="q" data-file="Standard_recording_24" data-start="539" data-end="552"><span class="pl">▶</span><span><i>"…download nahi ho raha tha."</i><span class="en">Where it broke for him.</span><span class="who">Creator 16 · 08:59</span></span><span class="qp"></span></button>
+<button class="q" data-file="Standard_recording_24" data-start="722" data-end="750"><span class="pl">▶</span><span><i>"YouTube se samjha tha… unki language se samajh nahi aaya, first baar mein apne ko bhi nahi aata."</i><span class="en">YouTube tutorials were the only teacher, and their language did not land.</span><span class="who">Creator 16 · 12:02</span></span><span class="qp"></span></button>
+<button class="q" data-file="Creator_5" data-start="423" data-end="442"><span class="pl">▶</span><span><i>"ChatGPT se prompt likhwa ke… woh prompt Flow mein daalte hain, photo ke saath."</i><span class="en">Creator 4 runs the identical ChatGPT-to-Flow recipe.</span><span class="who">Creator 4 · 07:03</span></span><span class="qp"></span></button>
+    </div>
+  </div>
 </div>
 
-<h3 style="margin-top:22px" id="v4">On video: Gemini outfit images from a product photo</h3>
-<p class="lead">7 Oct, 10:44 am. Creator 13 (Himanshi and Rishika) generate four images of a woman in a blue outfit with Gemini from a Meesho product photo, then pick products, create the link and switch on Auto-DM. The 9 Oct Mega Blockbuster Sale banner is already on their app.</p>
-<div class="vgrid">
-  <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v4_gemini.jpg" src="lod_media/clips/gemini_outfit_images.mp4"></video><div class="vb"><b>Gemini: four outfit images in a minute</b><p>60 s clip · Faceless content without ordering the product.</p></div></div>
-  <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v4_select.jpg" src="lod_media/clips/link_and_autodm_sr19.mp4"></video><div class="vb"><b>Select products → link → Auto-DM</b><p>50 s clip · Earning creators do this without help.</p></div></div>
-  <div class="shot" data-full="lod_media/img/v4_gemini.jpg" data-cap="Gemini output: four images of the same outfit"><img src="lod_media/img/v4_gemini.jpg" alt="Gemini generated images"><span>Gemini output from one product photo</span></div>
-  <div class="shot" data-full="lod_media/img/v4_sale.jpg" data-cap="Mega Blockbuster Sale starts Fri 9 Oct, seen on their app"><img src="lod_media/img/v4_sale.jpg" alt="Mega Blockbuster Sale"><span>Sale banner: "creators earn ~3x in sale week" landed</span></div>
+<div class="sbs" id="v4">
+  <div class="media">
+    <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v4_gemini.jpg" src="lod_media/clips/gemini_outfit_images.mp4"></video><div class="vb"><b>Gemini: four outfit images in a minute</b><p>60 s clip · 7 Oct, 10:44 am</p></div></div>
+    <div class="vcard"><video controls preload="metadata" poster="lod_media/img/v4_select.jpg" src="lod_media/clips/link_and_autodm_sr19.mp4"></video><div class="vb"><b>Select products → link → Auto-DM</b><p>50 s clip</p></div></div>
+  </div>
+  <div class="text">
+    <h3>Gemini outfit images, then the link and Auto-DM</h3>
+    <p>Creator 13 (Himanshi and Rishika) generate four images of a woman in a blue outfit with Gemini from a Meesho product photo, then pick products, create the link and switch on Auto-DM. The 9 Oct Mega Blockbuster Sale banner is already on their app, and "creators earn about 3x in sale week" was the one message that visibly motivated people.</p>
+    <div class="shots two-up">
+      <div class="shot" data-full="lod_media/img/v4_gemini.jpg" data-cap="Gemini output: four images of the same outfit"><img src="lod_media/img/v4_gemini.jpg" alt="Gemini generated images"><span>Gemini output from one product photo</span></div>
+      <div class="shot" data-full="lod_media/img/v4_sale.jpg" data-cap="Mega Blockbuster Sale starts Fri 9 Oct"><img src="lod_media/img/v4_sale.jpg" alt="Mega Blockbuster Sale"><span>Sale banner on their app</span></div>
+    </div>
+    <div class="ins-box"><b>Posting habits, in their words</b>
+      <ul><li>Active creators post 2–3 times a day; the issue is continuity, not frequency.</li>
+      <li>Low earners stop because nothing happens (no sales, no reach, exams, family, fear of return charges, no time). High earners stop when the platform gets in the way (a block, 0% commission).</li>
+      <li>Only earning creators described a routine: products in the morning, shoot or generate, post, check DMs and orders.</li></ul></div>
+    <div class="qs">
+<button class="q" data-file="CREATOR_2" data-start="152" data-end="171"><span class="pl">▶</span><span><i>"Ek post banane mein kitna time lag jaata hai?" "Poora din… teen ghante lag jaate hain."</i><span class="en">Three hours per post around an 11-hour shift, so one reel every three days.</span><span class="who">Creator 2 · 02:32</span></span><span class="qp"></span></button>
+<button class="q" data-file="Creator_7" data-start="444" data-end="470"><span class="pl">▶</span><span><i>"Aadhe ghante… paanch-chhe videos ek din mein shoot karke rakh leti hoon." "Commission wali cheez pata hai?" "Nahi."</i><span class="en">Creator 6 batch-shoots 5–6 videos and posts 2–3 a day, without knowing the commission.</span><span class="who">Creator 6 · 07:24</span></span><span class="qp"></span></button>
+<button class="q" data-file="Creator_6" data-start="656" data-end="690"><span class="pl">▶</span><span><i>"Pehle do-teen post ki thi, phir reach nahi aayi, kamai nahi hui, isliye chhod diya."</i><span class="en">The stop reason in one line: no reach, no income, no reason to continue.</span><span class="who">Creator 5 · 10:56</span></span><span class="qp"></span></button>
+<button class="q" data-file="Standard_recording_14" data-start="489" data-end="500"><span class="pl">▶</span><span><i>"Aapka motivation isliye gira ki clicks nahi aa rahe the, toh aapne band kar diya."</i><span class="en">716K views, no clicks, no feedback, stopped.</span><span class="who">Creator 10 · 08:09</span></span><span class="qp"></span></button>
+<button class="q" data-file="Standard_recording_26" data-start="165" data-end="186"><span class="pl">▶</span><span><i>"Pehle jab main zyada create karti thi, ek din mein das se pandrah (orders)… abhi kam kar diya hai."</i><span class="en">The high earner: 10–15 orders a day when posting heavily; volume fell after the block.</span><span class="who">Creator 17 (b) · 02:45</span></span><span class="qp"></span></button>
+<button class="q" data-file="Standard_recording_26" data-start="0" data-end="70"><span class="pl">▶</span><span><i>"Meesho ke call center se scam calls… 'OTP do'… woh return kar dega aur payment apne bank account mein daal dega."</i><span class="en">The OTP refund scam, from the creator it happened to.</span><span class="who">Creator 17 (b) · 00:00</span></span><span class="qp"></span></button>
+<button class="q" data-file="Creator_7" data-start="764" data-end="795"><span class="pl">▶</span><span><i>"Sale aa rahi hai Meesho ki 9 October se… sale pe hamare creators teen guna zyada kamaate hain."</i><span class="en">The sale-week pitch that landed.</span><span class="who">Creator 6 · 12:44</span></span><span class="qp"></span></button>
+    </div>
+  </div>
 </div>
 </section>
 
